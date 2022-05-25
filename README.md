@@ -23,6 +23,47 @@ $$\mathcal{L}_{grad} = ||\mathbf{v} - \mathbf{w}||_1 +  || \nabla \mathbf{v} -  
 
 2) `Position contextualizing' --- we encode position of each measurement to help network overcome shortcomings of cnn.
 
+## Model architecture
+
+![](pictures/arch_1.drawio.png)
+
+## Example of upscaling with our model
+
+![](pictures/examplw.png)
+
+## Results
+```latex
+\scriptsize
+\centering
+
+\begin{tabular}{p{0.1\textwidth}| p{0.07\textwidth}p{0.07\textwidth}p{0.1\textwidth}} 
+\toprule
+
+\textbf{Model} & \textbf{MSE} & \textbf{MAE} & \textbf{PSNR} \\
+
+\midrule
+
+\multicolumn{4}{c}{\textbf{Baselines}} \\ 
+\midrule
+Bicubic & 7.2e-3  &  0.0604 & 22.404 \\
+SR-CNN & 3.8e-3 & 0.0438 & 25.605 \\
+ESRGAN & 5.6e-3 & 0.0533 & 23.795 \\
+SRFBN & 3.8e-3 & 0.0428 & 25.820 \\
+\midrule
+\multicolumn{4}{c}{\textbf{Single frame model setups }} \\ 
+\midrule
+Gradient loss & 3.7e-3 & 0.0426  &  25.838 \\
+Contextualized & 3.7e-3 & 0.0427 & 25.854 \\
+Both & 3.6e-3 & 0.0421 & 25.912  \\
+\midrule
+\multicolumn{4}{c}{\textbf{Multiframe setup}} \\
+\midrule
+Final & 3.1e-3 & 0.0396 & 26.113  \\
+\bottomrule
+\end{tabular}
+\caption{Performance of models on Test data. \textbf{MSE}=mean square error. \textbf{MAE}=mean absolute error. \textbf{PSNR}=average peak signal to noise ratio. }
+
+'''
 
 ## Conclusion
 
