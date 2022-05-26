@@ -49,7 +49,7 @@ We are planning to continue this research, did more research into the subject, u
 ## Data source
 [Data used in the project
 ](https://drive.google.com/file/d/1d566eJK2pmq3oCyuI7IlVBg7ZxIpDwC-/view?usp=sharing)
-See `datasets' subfolder for more information
+See `data/wind' subfolder for more information
 we consider uploading data into this repository if it will be really needed (they are quite large).
 
 
@@ -60,7 +60,7 @@ we consider uploading data into this repository if it will be really needed (the
 git clone https://github.com/ArGintum/featherweather.git
 ```
 
-2) Upload data into ```datasets''' subfolder and unzip
+2) Upload data into ```data/wind''' subfolder and unzip
 3) Use IPython notebook ```Baselines.ipynd''' to get accustomed with quality metrics of baselines
 4) Unzip baselines predictions if needed
 5) Use IPython notebook ```Mainmodels.ipynd''' to get accustomed with our model and its training and evaluating
